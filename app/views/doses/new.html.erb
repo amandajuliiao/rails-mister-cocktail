@@ -1,0 +1,6 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description, label: 'Add your description', error: 'Username is mandatory' %>
+  <%= f.input :amount, label: 'Add the amount of each ingredient', error: 'Amount is mandatory' %>
+  <%= f.association :ingredient %>
+  <%= f.button :submit %>
+<% end %>

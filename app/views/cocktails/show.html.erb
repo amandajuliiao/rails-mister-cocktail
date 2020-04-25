@@ -1,0 +1,13 @@
+<h2><%= @cocktail.name %></h2>
+
+<%= link_to 'Add a receipt to your cocktail', new_cocktail_dose_path(@cocktail) %>
+
+<% @cocktail.doses.each do |dose| %>
+ <p><%= dose.description %></p>
+  <p><%= dose.amount %></p>
+  <p><%= dose.ingredient.name %></p>
+
+<% end %>
+
+
+<!-- link com delete olhar a documentacao de link_to -->
