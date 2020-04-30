@@ -4,6 +4,8 @@
 <p><%= link_to "Back to all cocktails", root_path %></p>
 <p><%= link_to 'Add a receipt to your cocktail', new_cocktail_dose_path(@cocktail) %></p>
 
+<%= cl_image_path @cocktail.photo.key, height:300, width: 300, crop: :fill %>
+
 <% @cocktail.doses.each do |dose| %>
  <p><%= dose.description %></p>
   <p><%= dose.ingredient.name %></p>
