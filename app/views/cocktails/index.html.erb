@@ -1,6 +1,12 @@
-<h1>All Cocktails</h1>
- <% @cocktails.each do |cocktail| %>
- <h5><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
-<% end %>
- <p><%= link_to 'Create new cocktail', new_cocktail_path %></p>
 
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://static.wixstatic.com/media/0ac68d_8e8322c721104f5ca3288bddd342c6fb~mv2.jpg/v1/fill/w_1015,h_450,al_t,q_85/0ac68d_8e8322c721104f5ca3288bddd342c6fb~mv2.webp');">
+  <div class="banner-content">
+    <h1>Cocktails</h
+    <h1>Best cocktails of  Rio de Janeiro</h1>
+    <% @cocktails.each do |cocktail| %>
+    <h5><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+    <% end %>
+  </div>
+  <p><%= link_to 'Create new cocktail', new_cocktail_path %></p>
+</div>
+</html>
